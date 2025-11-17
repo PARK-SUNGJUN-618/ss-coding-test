@@ -9,6 +9,7 @@ public class CodingTest {
         // String[][] tickets = {{"ICN", "ABC"}, {"ICN", "ATL"}, {"SFO", "ATL"}, {"ATL", "ICN"}, {"ATL","SFO"}};
         String[] answer= solution(tickets);
 
+        // for printing answer
         for(String str : answer) {
             System.out.println(str);
         }
