@@ -5,8 +5,8 @@ public class CodingTest {
 
     public static void main(String[] args) {
         //HashMap<String, String> root = 
-        // String[][] tickets = {{"ICN", "JFK"}, {"HND", "IAD"}, {"JFK", "HND"}};
-        String[][] tickets = {{"ICN", "ABC"}, {"ICN", "ATL"}, {"SFO", "ATL"}, {"ATL", "ICN"}, {"ATL","SFO"}};
+        String[][] tickets = {{"ICN", "JFK"}, {"HND", "IAD"}, {"JFK", "HND"}};
+        // String[][] tickets = {{"ICN", "ABC"}, {"ICN", "ATL"}, {"SFO", "ATL"}, {"ATL", "ICN"}, {"ATL","SFO"}};
         String[] answer= solution(tickets);
 
         for(String str : answer) {
