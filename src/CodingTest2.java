@@ -6,5 +6,13 @@ public class CodingTest2 {
         // ex2)result:-1
         //int[][] maps2 = {{1,0,1,1,1},{1,0,1,0,1},{1,0,1,1,1},{1,1,1,0,0},{0,0,0,0,1}};
 
+        int result = solution(maps);
+        System.out.println(result);
+    }
+
+
+    public static int solution(int[][] maps) {
+        int answer = 0;
+        return answer;
     }
 }
