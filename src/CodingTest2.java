@@ -12,7 +12,9 @@ public class CodingTest2 {
 
 
     public static int solution(int[][] maps) {
+        boolean[][] visited = new boolean[maps.length][maps[0].length];
         int answer = 0;
+        
         return answer;
     }
 }
