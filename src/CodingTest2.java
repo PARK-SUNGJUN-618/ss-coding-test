@@ -15,6 +15,14 @@ public class CodingTest2 {
         boolean[][] visited = new boolean[maps.length][maps[0].length];
         int answer = 0;
         
+        dfs(maps, visited, answer, 0, 0);
+
         return answer;
+    }
+
+
+    private static void dfs(int[][] maps, boolean[][] visited, int answer, int i, int j) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'dfs'");
     }
 }
