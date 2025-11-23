@@ -21,8 +21,7 @@ public class CodingTest2 {
     }
 
 
-    private static void dfs(int[][] maps, boolean[][] visited, int answer, int i, int j) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'dfs'");
+    private static void dfs(int[][] maps, boolean[][] visited, int answer, int n, int m) {
+        visited[n][m] = true;
     }
 }
