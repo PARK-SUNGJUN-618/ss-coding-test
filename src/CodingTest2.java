@@ -10,18 +10,28 @@ public class CodingTest2 {
         System.out.println(result);
     }
 
+    static int answer;
+    static boolean[][] visited;
+    static int maxN;
+    static int maxM;
 
     public static int solution(int[][] maps) {
-        boolean[][] visited = new boolean[maps.length][maps[0].length];
-        int answer = 0;
+        maxN = maps.length;
+        maxM = maps[0].length;
+        visited = new boolean[maxN][maxM];
+        answer = 0;
         
-        dfs(maps, visited, answer, 0, 0);
+        dfs(maps, 0, 0);
 
         return answer;
     }
 
 
-    private static void dfs(int[][] maps, boolean[][] visited, int answer, int n, int m) {
+    private static void dfs(int[][] maps, int n, int m) {
         visited[n][m] = true;
+
+        if (n == 4 && m == 4) return;
+
+        if (!visited[n][m] && n < )
     }
 }
