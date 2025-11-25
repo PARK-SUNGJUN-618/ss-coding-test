@@ -32,6 +32,8 @@ public class CodingTest2 {
 
         if (n == 4 && m == 4) return;
 
-        if (!visited[n][m] && n < )
+        if (!visited[n][m] && n < maxN) {
+            
+        }
     }
 }
