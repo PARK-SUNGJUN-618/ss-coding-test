@@ -14,12 +14,14 @@ public class CodingTest2 {
     static boolean[][] visited;
     static int maxN;
     static int maxM;
+    static int[][] maps;
 
     public static int solution(int[][] maps) {
         maxN = maps.length;
         maxM = maps[0].length;
         visited = new boolean[maxN][maxM];
         answer = 0;
+        
         
         dfs(maps, 0, 0);
 
@@ -32,8 +34,9 @@ public class CodingTest2 {
 
         if (n == 4 && m == 4) return;
 
-        if (!visited[n][m] && n < maxN) {
-            
+        if (n < maxN-1 && !visited[n+1][m]) {
+            n++;
+            dfs(maps, n, m);
         }
     }
 }
