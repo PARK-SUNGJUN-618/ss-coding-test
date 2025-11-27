@@ -31,12 +31,30 @@ public class CodingTest2 {
 
     private static void dfs(int[][] maps, int n, int m) {
         visited[n][m] = true;
+        System.out.println("n:" + n + ",m:" + m);
 
         if (n == 4 && m == 4) return;
 
         if (n < maxN-1 && !visited[n+1][m]) {
             n++;
+            answer++;
             dfs(maps, n, m);
         }
+        if (m < maxM-1 && !visited[n][m+1]) {
+            m++;
+            answer++;
+            dfs(maps, n, m);
+        }
+        if (n > 0 && !visited[n-1][m]) {
+            n--;
+            answer++;
+            dfs(maps, n, m);
+        }
+        if (m > 0 && !visited[n][m-1]) {
+            m--;
+            answer++;
+            dfs(maps, n, m);
+        }
+
     }
 }
