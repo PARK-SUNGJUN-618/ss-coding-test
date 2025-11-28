@@ -35,22 +35,22 @@ public class CodingTest2 {
 
         if (n == 4 && m == 4) return;
 
-        if (n < maxN-1 && !visited[n+1][m]) {
+        if (n < maxN-1 && !visited[n+1][m] && maps[n+1][m] == 1) {
             n++;
             answer++;
             dfs(maps, n, m);
         }
-        if (m < maxM-1 && !visited[n][m+1]) {
+        if (m < maxM-1 && !visited[n][m+1] && maps[n][m+1] == 1) {
             m++;
             answer++;
             dfs(maps, n, m);
         }
-        if (n > 0 && !visited[n-1][m]) {
+        if (n > 0 && !visited[n-1][m] && maps[n-1][m] == 1) {
             n--;
             answer++;
             dfs(maps, n, m);
         }
-        if (m > 0 && !visited[n][m-1]) {
+        if (m > 0 && !visited[n][m-1] && maps[n][m-1] == 1) {
             m--;
             answer++;
             dfs(maps, n, m);
