@@ -20,37 +20,42 @@ public class CodingTest2 {
         maxN = maps.length;
         maxM = maps[0].length;
         visited = new boolean[maxN][maxM];
-        answer = 0;
+        answer = Integer.MAX_VALUE;
         
         
-        dfs(maps, 0, 0);
+        dfs(maps, 0, 0, 1);
 
+        answer = answer == Integer.MAX_VALUE ? -1 : answer; 
         return answer;
     }
 
 
-    private static void dfs(int[][] maps, int n, int m) {
+    private static void dfs(int[][] maps, int n, int m, int count) {
         visited[n][m] = true;
-        System.out.println("n:" + n + ",m:" + m);
+        System.out.println("n:" + n + ",m:" + m + ",cnt:" + count);
 
-        if (n == maxN-1 && m == maxM-1) return;
+        if (n == maxN-1 && m == maxM-1) {
+            answer = Math.min(answer, count);
+            return;
+        }
 
         if (n < maxN-1 && !visited[n+1][m] && maps[n+1][m] == 1) {
-            answer++;
-            dfs(maps, n+1, m);
+            System.out.println("↓↓↓↓↓");
+            dfs(maps, n+1, m, count+1);
         }
         if (m < maxM-1 && !visited[n][m+1] && maps[n][m+1] == 1) {
-            answer++;
-            dfs(maps, n, m+1);
+            System.out.println("→→→→→");
+            dfs(maps, n, m+1, count+1);
         }
         if (n > 0 && !visited[n-1][m] && maps[n-1][m] == 1) {
-            answer++;
-            dfs(maps, n-1, m);
+            System.out.println("↑↑↑↑↑");
+            dfs(maps, n-1, m, count+1);
         }
         if (m > 0 && !visited[n][m-1] && maps[n][m-1] == 1) {
-            answer++;
-            dfs(maps, n, m-1);
+            System.out.println("←←←←←");
+            dfs(maps, n, m-1, count+1);
         }
 
+        visited[n][m] = false;
     }
 }
