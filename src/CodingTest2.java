@@ -40,19 +40,15 @@ public class CodingTest2 {
         }
 
         if (n < maxN-1 && !visited[n+1][m] && maps[n+1][m] == 1) {
-            System.out.println("↓↓↓↓↓");
             dfs(maps, n+1, m, count+1);
         }
         if (m < maxM-1 && !visited[n][m+1] && maps[n][m+1] == 1) {
-            System.out.println("→→→→→");
             dfs(maps, n, m+1, count+1);
         }
         if (n > 0 && !visited[n-1][m] && maps[n-1][m] == 1) {
-            System.out.println("↑↑↑↑↑");
             dfs(maps, n-1, m, count+1);
         }
         if (m > 0 && !visited[n][m-1] && maps[n][m-1] == 1) {
-            System.out.println("←←←←←");
             dfs(maps, n, m-1, count+1);
         }
 
