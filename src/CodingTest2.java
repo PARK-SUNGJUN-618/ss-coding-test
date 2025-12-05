@@ -32,7 +32,6 @@ public class CodingTest2 {
 
     private static void dfs(int[][] maps, int n, int m, int count) {
         visited[n][m] = true;
-        // System.out.println("n:" + n + ",m:" + m + ",cnt:" + count);
 
         if (n == maxN-1 && m == maxM-1) {
             answer = Math.min(answer, count);
