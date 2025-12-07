@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class CodingTest3 {
 
     static boolean graph[][];
@@ -28,7 +30,19 @@ public class CodingTest3 {
         n = in_n;
         graph = in_graph;
         visited = new boolean[n][n];
+        result = 0;
+        ArrayList<Integer> resultList = new ArrayList<>();
+        int nowX = 0;
+        int nowY = 0;
+        int count = 0;
 
-        dfs();
+        dfs(resultList, nowX, nowY, count);
+    }
+    private static void dfs(ArrayList<Integer> resultList, int nowX, int nowY, int count) {
+        if (graph[nowX][nowY]) {
+            visited[nowX][nowY] = true;
+            count++;
+        }
+
     }
 }
