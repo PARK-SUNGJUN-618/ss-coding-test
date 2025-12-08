@@ -24,11 +24,11 @@ public class CodingTest3 {
             {false,true ,true ,true ,false,false,false}
         };
         
-        solution(n, graph);
+        solution(in_n, in_graph);
         
         System.out.println(result);
         for(int resultCnt : resultCnts) {
-            System.out.println(resultCnt);
+            System.out.println(resultCnt); 
         }
     }
     private static void solution(int in_n, boolean[][] in_graph) {
@@ -36,12 +36,22 @@ public class CodingTest3 {
         graph = in_graph;
         visited = new boolean[n][n];
         result = 0;
-        ArrayList<Integer> resultList = new ArrayList<>();
+
+        ArrayList<Integer> countList = new ArrayList<>();
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                if (graph[i][j] && !visited[i][j]) {
+                    countPerGroup = 0;
+                    dfs(i, j);
+                }
+            }
+        }
+
         int nowX = 0;
         int nowY = 0;
         int count = 0;
 
-        dfs(resultList, nowX, nowY, count);
+        //dfs(resultList, nowX, nowY, count);
     }
     private static void dfs(ArrayList<Integer> resultList, int nowX, int nowY, int count) {
         if (graph[nowX][nowY]) {
@@ -49,5 +59,8 @@ public class CodingTest3 {
             count++;
         }
 
+        if (nowX == n-1 && nowY == n-1) {
+
+        }
     }
 }
