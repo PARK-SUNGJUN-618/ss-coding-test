@@ -8,6 +8,11 @@ public class CodingTest3 {
     static int result;
     static int resultCnts[];
     public static void main(String[] args) {
+        // idea
+        // 1. graph 0,0 check 
+        //      -> false -> go 2.
+        //      -> true  -> visited 0,0 true -> count 1 ->
+        // 2. graph 0,1 check ->
         int in_n = 7;
         boolean[][] in_graph = new boolean[][]{
             {false,true ,true ,false,true ,false,false},
