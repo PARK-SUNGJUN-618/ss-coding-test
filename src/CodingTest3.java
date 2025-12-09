@@ -43,6 +43,7 @@ public class CodingTest3 {
                 if (graph[i][j] && !visited[i][j]) {
                     countPerGroup = 0;
                     dfs(i, j);
+                    countList.add(countPerGroup);
                 }
             }
         }
