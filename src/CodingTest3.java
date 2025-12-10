@@ -6,8 +6,10 @@ public class CodingTest3 {
     static boolean graph[][];
     static boolean visited[][];
     static int n;
-    static int result;
-    static int resultCnts[];
+    static int countPerGroup;
+    static int[] dirY = [1, -1, 0, 0];
+    static int[] dirX = [0, 0, 1, -1];
+
     public static void main(String[] args) {
         // idea
         // 1. graph 0,0 check 
@@ -37,7 +39,6 @@ public class CodingTest3 {
         n = in_n;
         graph = in_graph;
         visited = new boolean[n][n];
-        result = 0;
 
         ArrayList<Integer> countList = new ArrayList<>();
         for (int i = 0; i < n; i++) {
@@ -57,14 +58,15 @@ public class CodingTest3 {
 
         //dfs(resultList, nowX, nowY, count);
     }
-    private static void dfs(ArrayList<Integer> resultList, int nowX, int nowY, int count) {
-        if (graph[nowX][nowY]) {
-            visited[nowX][nowY] = true;
-            count++;
-        }
+    private static void dfs(int x, int y) {
+        visited[x][y] = true;
+        // if (graph[nowX][nowY]) {
+        //     visited[nowX][nowY] = true;
+        //     count++;
+        // }
 
-        if (nowX == n-1 && nowY == n-1) {
+        // if (nowX == n-1 && nowY == n-1) {
 
-        }
+        // }
     }
 }
