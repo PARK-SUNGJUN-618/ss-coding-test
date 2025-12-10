@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class CodingTest3 {
 
@@ -24,14 +25,15 @@ public class CodingTest3 {
             {false,true ,true ,true ,false,false,false}
         };
         
-        solution(in_n, in_graph);
+        ArrayList<Integer> countList = solution(in_n, in_graph);
         
-        System.out.println(result);
-        for(int resultCnt : resultCnts) {
-            System.out.println(resultCnt); 
+        System.out.println(countList.size());
+        Collections.sort(countList);
+        for(int i = 0; i < countList.size(); i++) {
+            System.out.println(countList.get(i)); 
         }
     }
-    private static void solution(int in_n, boolean[][] in_graph) {
+    private static ArrayList<Integer> solution(int in_n, boolean[][] in_graph) {
         n = in_n;
         graph = in_graph;
         visited = new boolean[n][n];
@@ -48,9 +50,10 @@ public class CodingTest3 {
             }
         }
 
-        int nowX = 0;
-        int nowY = 0;
-        int count = 0;
+        return countList;
+        // int nowX = 0;
+        // int nowY = 0;
+        // int count = 0;
 
         //dfs(resultList, nowX, nowY, count);
     }
