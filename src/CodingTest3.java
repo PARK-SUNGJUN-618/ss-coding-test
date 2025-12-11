@@ -7,8 +7,8 @@ public class CodingTest3 {
     static boolean visited[][];
     static int n;
     static int countPerGroup;
-    static int[] dirY = [1, -1, 0, 0];
-    static int[] dirX = [0, 0, 1, -1];
+    static int[] dirY = {1, -1, 0, 0};
+    static int[] dirX = {0, 0, 1, -1};
 
     public static void main(String[] args) {
         // idea
@@ -60,6 +60,11 @@ public class CodingTest3 {
     }
     private static void dfs(int x, int y) {
         visited[x][y] = true;
+        countPerGroup++;
+
+
+
+
         // if (graph[nowX][nowY]) {
         //     visited[nowX][nowY] = true;
         //     count++;
