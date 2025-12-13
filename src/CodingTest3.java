@@ -65,6 +65,9 @@ public class CodingTest3 {
         for (int i = 0; i < 4; i++) {
             int newX = x + dirX[i];
             int newY = y + dirY[i];
+            if (!visited[newX][newY] && graph[newX][newY]) {
+                dfs(newX, newY);
+            }
         }
 
 
