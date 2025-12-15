@@ -80,5 +80,87 @@ public class CodingTest3 {
         // if (nowX == n-1 && nowY == n-1) {
 
         // }
+
+//         debug
+//         solution
+// i 0
+// j 0 > 1
+
+// countPerGroup 0 > 1 > ... > 7
+
+// 	dfs!
+// 	x 0
+// 	y 1
+// 	visited[0][1] true
+
+// 	newX 1
+// 	newY 1
+
+// 		dfs!!
+// 		x 1
+// 		y 1
+// 		visited[1][1] true
+		
+// 		newX 2
+// 		newY 1
+		
+// 			dfs!!!
+// 			x 2
+// 			y 1
+// 			visited[2][1] true
+			
+// 			newX 3 > 1 > 2
+// 			newY 1 > 2
+			
+// 				dfs!!!
+// 				x 2
+// 				y 2
+// 				visited[2][2] true
+				
+// 				newX 3 > 1
+// 				newY 2
+				
+// 					dfs!!!!
+// 					x 1
+// 					y 2
+// 					visited[1][2] true
+					
+// 					newX 2 > 0
+// 					newY 2
+					
+// 						dfs!!!!!
+// 						x 0
+// 						y 2
+// 						visited[0][2] true
+						
+// 						newX 1 > -1 > 0
+// 						newY 2 > 3 > 1
+					
+// 					newX 1
+// 					newY 3 > 1
+				
+// 				newX 2
+// 				newY 3 > 1
+			
+// 			newX 2
+// 			newY 0
+			
+// 				dfs!!!
+// 				x 2
+// 				y 0
+// 				visited[2][0] true
+				
+// 				newX 3 > 1 > 0
+// 				newY 0 > 1 > -1
+		
+// 		newX 2 > 0 > 1
+// 		newY 1 > 2 > 0
+	
+// 	newX -1 > 0
+// 	newY 1 > 2 > 0
+
+// countList.add(7)
+
+
     }
 }
