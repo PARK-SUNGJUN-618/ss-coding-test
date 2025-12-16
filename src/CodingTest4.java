@@ -1,4 +1,4 @@
-public class CodingTest2 {
+public class CodingTest4 {
     public static void main(String[] args) {
         // Game Map Shortest Path
         // ex1)result:11
