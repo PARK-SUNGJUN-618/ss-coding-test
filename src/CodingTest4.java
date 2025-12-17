@@ -1,6 +1,6 @@
 public class CodingTest4 {
     public static void main(String[] args) {
-        // Game Map Shortest Path
+        // Game Map Shortest Path - bfs
         // ex1)result:11
         int[][] maps = {{1,0,1,1,1},{1,0,1,0,1},{1,0,1,1,1},{1,1,1,0,1},{0,0,0,0,1}};
         
