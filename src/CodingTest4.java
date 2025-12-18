@@ -32,26 +32,6 @@ public class CodingTest4 {
 
 
     private static void dfs(int[][] maps, int n, int m, int count) {
-        visited[n][m] = true;
-
-        if (n == maxN-1 && m == maxM-1) {
-            answer = Math.min(answer, count);
-            return;
-        }
-
-        if (n < maxN-1 && !visited[n+1][m] && maps[n+1][m] == 1) {
-            dfs(maps, n+1, m, count+1);
-        }
-        if (m < maxM-1 && !visited[n][m+1] && maps[n][m+1] == 1) {
-            dfs(maps, n, m+1, count+1);
-        }
-        if (n > 0 && !visited[n-1][m] && maps[n-1][m] == 1) {
-            dfs(maps, n-1, m, count+1);
-        }
-        if (m > 0 && !visited[n][m-1] && maps[n][m-1] == 1) {
-            dfs(maps, n, m-1, count+1);
-        }
-
-        visited[n][m] = false;
+        
     }
 }
