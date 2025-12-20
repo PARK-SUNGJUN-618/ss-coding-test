@@ -1,5 +1,4 @@
 public class CodingTest5 {
-
     /*
      * Find the prime numbers.
      *
