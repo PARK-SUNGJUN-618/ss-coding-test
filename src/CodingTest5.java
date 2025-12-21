@@ -14,6 +14,9 @@ public class CodingTest5 {
      * @return Number of unique prime numbers
      */
     public static void main(String[] args) {
-
+        String input = "17";
+        
+        int output = solution(input);
+        System.out.println(output);
     }
 }
