@@ -1,4 +1,4 @@
-public class CodingTest5 {
+class Solution {
     /*
      * Find the prime numbers.
      *
@@ -13,20 +13,22 @@ public class CodingTest5 {
      * @param numbers String containing digit pieces (e.g. "011")
      * @return Number of unique prime numbers
      */
-    public static void main(String[] args) {
-        String input = "17";
-        
-        int output = solution(input);
-        System.out.println(output);
-    }
-
-    private static int solution(String numbers) {
+    private int solution(String numbers) {
         // Find numberSet
+        
 
         // Count prime number
         int count = 0;
 
         // return count
         return count;
+    }
+
+    public static void main(String[] args) {
+        String input = "17";
+        
+        Solution sol = new Solution();
+        int output = sol.solution(input);
+        System.out.println(output);
     }
 }
