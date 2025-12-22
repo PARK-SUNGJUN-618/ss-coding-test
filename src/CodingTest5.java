@@ -19,4 +19,14 @@ public class CodingTest5 {
         int output = solution(input);
         System.out.println(output);
     }
+
+    private static int solution(String numbers) {
+        // Find numberSet
+
+        // Count prime number
+        int count = 0;
+
+        // return count
+        return count;
+    }
 }
