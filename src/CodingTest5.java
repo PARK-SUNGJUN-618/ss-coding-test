@@ -1,3 +1,5 @@
+import java.util.HashSet;
+
 class Solution {
     /*
      * Find the prime numbers.
@@ -14,14 +16,27 @@ class Solution {
      * @return Number of unique prime numbers
      */
     private int solution(String numbers) {
-        // Find numberSet
-        
+        // Find number set
+        findNumberSet("", numbers);
+        System.out.println();
 
         // Count prime number
         int count = 0;
 
         // return count
         return count;
+    }
+
+    // find number set
+    HashSet<Integer> numberSet = new HashSet<>();
+    private void findNumberSet(String nowNum, String others) {
+        if (!nowNum.equals("")) {
+            numberSet.add(Integer.valueOf(nowNum));
+        }
+
+        for (int i = 0; i < others.length(); i++) {
+            findNumberSet(nowNum + others.charAt(i), others.substring(0, i) + others.substring(i + 1));
+        }        
     }
 
     public static void main(String[] args) {
