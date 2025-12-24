@@ -18,7 +18,8 @@ class Solution {
     private int solution(String numbers) {
         // Find number set
         findNumberSet("", numbers);
-        System.out.println();
+        // for debug of number set
+        // System.out.println(numberSet);
 
         // Count prime number
         int count = 0;
