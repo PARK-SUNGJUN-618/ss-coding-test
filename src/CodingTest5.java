@@ -1,4 +1,5 @@
 import java.util.HashSet;
+import java.util.Iterator;
 
 class Solution {
     /*
@@ -23,6 +24,14 @@ class Solution {
 
         // Count prime number
         int count = 0;
+        Iterator<Integer> it = numberSet.iterator();
+        while(it.hasNext()) {
+            int number = it.next();
+            if (isPrimeNum(number)) {
+                count++;
+            }
+        }
+        
 
         // return count
         return count;
