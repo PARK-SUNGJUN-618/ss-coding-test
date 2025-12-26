@@ -37,6 +37,15 @@ class Solution {
         return count;
     }
 
+    private boolean isPrimeNum(int number) {
+        // return false if number is 0 or 1 (not prime number)
+        if (number == 0 || number == 1) {
+            return false;
+        }    
+
+
+    }
+
     // find number set
     HashSet<Integer> numberSet = new HashSet<>();
     private void findNumberSet(String nowNum, String others) {
