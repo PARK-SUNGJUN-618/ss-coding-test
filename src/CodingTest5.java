@@ -43,7 +43,9 @@ class Solution {
             return false;
         }    
 
-
+        int limit = (int) Math.sqrt(number);
+        for (int i = 2; i < limit; i++) {
+        }
     }
 
     // find number set
