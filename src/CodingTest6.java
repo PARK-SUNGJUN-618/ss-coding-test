@@ -27,6 +27,7 @@ class Solution {
     private int solution(int[][] maps) {
         int[] moveX = {0 ,0, 1, -1};
         int[] moveY = {1, -1, 0 ,0};
+        int[][] countMaps = maps;
         int count = 0;
 
         Queue<int[]> queue = new LinkedList<>();
@@ -38,7 +39,7 @@ class Solution {
             int[] now = queue.poll();
 
             if (maps[now[0]][now[1]] == 1) {
-
+                
             }
         }
 
