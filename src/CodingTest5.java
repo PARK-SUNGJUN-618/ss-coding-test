@@ -46,11 +46,11 @@ class Solution {
         int limit = (int) Math.sqrt(number);
         for (int i = 2; i < limit; i++) {
             if (number % i == 0) {
-                return true;
+                return false;
             }
         }
 
-        return false;
+        return true;
     }
 
     // find number set
