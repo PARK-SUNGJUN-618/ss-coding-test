@@ -1,73 +1,43 @@
-import java.util.HashSet;
-import java.util.Iterator;
+
 
 class Solution {
     /*
-     * Find the prime numbers.
-     *
-     * Problem:
-     * Generate all possible numbers from the given digit pieces
-     * (using 1 ~ N digits) and count the number of unique prime numbers.
-     *
-     * Example:
-     * Input : "17"
-     * Output: 3 (7, 17, 71)
-     *
-     * @param numbers String containing digit pieces (e.g. "011")
-     * @return Number of unique prime numbers
-     */
-    private int solution(String numbers) {
-        // Find number set
-        findNumberSet("", numbers);
-        // for debug of number set
-        // System.out.println(numberSet);
-
-        // Count prime number
+    * Find the shortest path to the destination.
+    *
+    * Problem:
+    * Starting from the top-left corner (0,0), move to the bottom-right corner
+    * (N-1,M-1) in the minimum number of steps.
+    * You can move only up, down, left, or right through cells with value 1.
+    * Return -1 if the destination cannot be reached.
+    *
+    * Example:
+    * Input :
+    * [[1,0,1,1,1],
+    *  [1,0,1,0,1],
+    *  [1,0,1,1,1],
+    *  [1,1,1,0,1],
+    *  [0,0,0,0,1]]
+    *
+    * Output: 11
+    *
+    * @param maps 2D game map (1 = path, 0 = wall)
+    * @return Minimum number of cells in the shortest path, or -1 if unreachable
+    */
+    private int solution(int[][] maps) {
         int count = 0;
-        Iterator<Integer> it = numberSet.iterator();
-        while(it.hasNext()) {
-            int number = it.next();
-            if (isPrimeNum(number)) {
-                count++;
-            }
-        }
-        
-
         // return count
         return count;
     }
 
-    private boolean isPrimeNum(int number) {
-        // return false if number is 0 or 1 (not prime number)
-        if (number == 0 || number == 1) {
-            return false;
-        }    
-
-        int limit = (int) Math.sqrt(number);
-        for (int i = 2; i < limit; i++) {
-            if (number % i == 0) {
-                return false;
-            }
-        }
-
-        return true;
-    }
-
-    // find number set
-    HashSet<Integer> numberSet = new HashSet<>();
-    private void findNumberSet(String nowNum, String others) {
-        if (!nowNum.equals("")) {
-            numberSet.add(Integer.valueOf(nowNum));
-        }
-
-        for (int i = 0; i < others.length(); i++) {
-            findNumberSet(nowNum + others.charAt(i), others.substring(0, i) + others.substring(i + 1));
-        }        
-    }
-
     public static void main(String[] args) {
-        String input = "17";
-        
+        int[][] input = {
+            {1,0,1,1,1},
+            {1,0,1,0,1},
+            {1,0,1,1,1},
+            {1,1,1,0,1},
+            {0,0,0,0,1}
+        };
+
         Solution sol = new Solution();
         int output = sol.solution(input);
         System.out.println(output);
