@@ -24,6 +24,11 @@ class Solution {
     * @return Minimum number of cells in the shortest path, or -1 if unreachable
     */
     private int solution(int[][] maps) {
+        int[] moveX = {1, -1, 0 ,0};
+        int[] moveY = {1, -1, 0 ,0};
+
+
+
         int count = 0;
         // return count
         return count;
