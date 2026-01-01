@@ -1,4 +1,5 @@
-
+import java.util.LinkedList;
+import java.util.Queue;
 
 class Solution {
     /*
@@ -25,11 +26,17 @@ class Solution {
     */
     private int solution(int[][] maps) {
         int[] moveX = {1, -1, 0 ,0};
-        int[] moveY = {1, -1, 0 ,0};
-
-
-
+        int[] moveY = {0 ,0, 1, -1};
         int count = 0;
+
+        Queue<String> queue = new LinkedList<>();
+
+        queue.add("0,0");
+
+        while(!queue.isEmpty()) {
+
+        }
+
         // return count
         return count;
     }
