@@ -31,10 +31,11 @@ class Solution {
 
         Queue<String> queue = new LinkedList<>();
 
+        int[] start = {0, 0};
         queue.add("0,0");
 
         while(!queue.isEmpty()) {
-            
+            String[] now = queue.poll().split(",");
         }
 
         // return count
