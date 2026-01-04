@@ -29,13 +29,13 @@ class Solution {
         int[] moveY = {0 ,0, 1, -1};
         int count = 0;
 
-        Queue<String> queue = new LinkedList<>();
+        Queue<int[]> queue = new LinkedList<>();
 
         int[] start = {0, 0};
-        queue.add("0,0");
+        queue.add(start);
 
         while(!queue.isEmpty()) {
-            String[] now = queue.poll().split(",");
+            int[] now = queue.poll();
         }
 
         // return count
