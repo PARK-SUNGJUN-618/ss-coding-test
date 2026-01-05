@@ -25,8 +25,8 @@ class Solution {
     * @return Minimum number of cells in the shortest path, or -1 if unreachable
     */
     private int solution(int[][] maps) {
-        int[] moveX = {1, -1, 0 ,0};
-        int[] moveY = {0 ,0, 1, -1};
+        int[] moveX = {0 ,0, 1, -1};
+        int[] moveY = {1, -1, 0 ,0};
         int count = 0;
 
         Queue<int[]> queue = new LinkedList<>();
@@ -36,6 +36,10 @@ class Solution {
 
         while(!queue.isEmpty()) {
             int[] now = queue.poll();
+
+            if (maps[now[0]][now[1]] == 1) {
+
+            }
         }
 
         // return count
