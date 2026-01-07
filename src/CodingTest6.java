@@ -46,8 +46,19 @@ class Solution {
             int x = nowQueue[1];
             int dist = nowQueue[2];
             
+            // Destination reached
             if (y == m - 1 && x == n - 1) {
                 return dist;
+            }
+
+            // skip if out of map
+            if (y < 0 || x < 0 || y > m - 1 || x > n - 1) {
+                continue;
+            }
+
+            for (int i = 0; i < 4; i++) {
+                int[] addQueue = {y + moveY[i], x + moveX[i], dist + 1};
+                queue.offer(addQueue);
             }
         }
 
