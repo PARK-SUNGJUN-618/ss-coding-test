@@ -24,7 +24,7 @@ class Solution {
     * @param maps 2D game map (1 = path, 0 = wall)
     * @return Minimum number of cells in the shortest path, or -1 if unreachable
     */
-    private int solution(int[][] maps) {
+    public int solution(int[][] maps) {
         int[] moveY = {1, -1, 0 ,0};
         int[] moveX = {0 ,0, 1, -1};
         int m = maps.length;
