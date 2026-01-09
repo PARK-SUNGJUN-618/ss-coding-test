@@ -16,7 +16,7 @@ class Solution {
      * @param numbers String containing digit pieces (e.g. "011")
      * @return Number of unique prime numbers
      */
-    private int solution(String numbers) {
+    public int solution(String numbers) {
         // Find number set
         findNumberSet("", numbers);
         // for debug of number set
