@@ -67,7 +67,6 @@ class Solution {
     }
 
     public static void main(String[] args) {
-        System.out.println("here?????????");
         int[][] input = {
             {1,0,1,1,1},
             {1,0,1,0,1},
