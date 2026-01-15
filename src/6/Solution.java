@@ -47,6 +47,8 @@ class Solution {
             int x = nowQueue[1];
             int dist = nowQueue[2];
             System.out.println("y:" + y + ", x:" + x + ", dist:" + dist);
+
+
             // Destination reached
             if (y == m - 1 && x == n - 1) {
                 return dist;
@@ -58,7 +60,12 @@ class Solution {
             }
 
             for (int i = 0; i < 4; i++) {
-                int[] addQueue = {y + moveY[i], x + moveX[i], dist + 1};
+                int nextY = y + moveY[i];
+                int nextX = x + moveX[i];
+                if (visited[nextY][nextX]) {
+                    continue;
+                }
+                int[] addQueue = {nextY, nextX, dist + 1};
                 queue.offer(addQueue);
             }
         }
