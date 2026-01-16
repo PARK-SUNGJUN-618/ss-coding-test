@@ -54,17 +54,18 @@ class Solution {
                 return dist;
             }
 
-            // skip if out of map
-            if (y < 0 || x < 0 || y > m - 1 || x > n - 1) {
-                continue;
-            }
-
             for (int i = 0; i < 4; i++) {
                 int nextY = y + moveY[i];
                 int nextX = x + moveX[i];
+
+                // skip if out of map
+                if (y < 0 || x < 0 || y > m - 1 || x > n - 1) {
+                    continue;
+                }
                 if (visited[nextY][nextX]) {
                     continue;
                 }
+
                 int[] addQueue = {nextY, nextX, dist + 1};
                 queue.offer(addQueue);
             }
