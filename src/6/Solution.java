@@ -32,8 +32,6 @@ class Solution {
         System.out.println("m:" + m + ", n:" + n);
         boolean[][] visited = new boolean[m][n];
         
-        int count = 0;
-
         Queue<int[]> queue = new LinkedList<>();
 
         int[] start = {0, 0 ,1};
@@ -59,7 +57,7 @@ class Solution {
                 int nextX = x + moveX[i];
 
                 // skip if out of map
-                if (y < 0 || x < 0 || y > m - 1 || x > n - 1) {
+                if (nextY < 0 || nextX < 0 || nextY > m - 1 || nextX > n - 1) {
                     continue;
                 }
                 if (visited[nextY][nextX]) {
@@ -71,8 +69,8 @@ class Solution {
             }
         }
 
-        // return count
-        return count;
+        // return -1
+        return -1;
     }
 
     public static void main(String[] args) {
