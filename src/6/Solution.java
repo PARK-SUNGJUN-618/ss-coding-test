@@ -64,6 +64,7 @@ class Solution {
                     continue;
                 }
 
+                visited[nextY][nextX] = true;
                 int[] addQueue = {nextY, nextX, dist + 1};
                 queue.offer(addQueue);
             }
