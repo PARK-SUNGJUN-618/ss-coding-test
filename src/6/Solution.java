@@ -60,7 +60,7 @@ class Solution {
                 if (nextY < 0 || nextX < 0 || nextY > m - 1 || nextX > n - 1) {
                     continue;
                 }
-                if (visited[nextY][nextX]) {
+                if (visited[nextY][nextX] || maps[nextY][nextX] == 0) {
                     continue;
                 }
 
