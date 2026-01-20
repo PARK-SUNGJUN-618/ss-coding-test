@@ -29,7 +29,8 @@ class Solution {
         int[] moveX = {0 ,0, 1, -1};
         int m = maps.length;
         int n = maps[0].length;
-        System.out.println("m:" + m + ", n:" + n);
+        // for debug
+        // System.out.println("m:" + m + ", n:" + n);
         boolean[][] visited = new boolean[m][n];
         
         Queue<int[]> queue = new LinkedList<>();
@@ -56,11 +57,16 @@ class Solution {
                 int nextY = y + moveY[i];
                 int nextX = x + moveX[i];
 
-                // skip if out of map
+                // skip if out of bounds
                 if (nextY < 0 || nextX < 0 || nextY > m - 1 || nextX > n - 1) {
                     continue;
                 }
-                if (visited[nextY][nextX] || maps[nextY][nextX] == 0) {
+                // skip if already visited
+                if (visited[nextY][nextX]) {
+                    continue;
+                }
+                // skip if it is a wall
+                if (maps[nextY][nextX] == 0) {
                     continue;
                 }
 
