@@ -45,7 +45,8 @@ class Solution {
             int y = nowQueue[0];
             int x = nowQueue[1];
             int dist = nowQueue[2];
-            System.out.println("y:" + y + ", x:" + x + ", dist:" + dist);
+            // for debug
+            // System.out.println("y:" + y + ", x:" + x + ", dist:" + dist);
 
 
             // Destination reached
