@@ -33,18 +33,17 @@ class Solution2 {
         // System.out.println("m:" + m + ", n:" + n);
         boolean[][] visited = new boolean[m][n];
         
-        Queue<int[]> queue = new LinkedList<>();
+        Queue<Node> queue = new LinkedList<>();
 
-        int[] start = {0, 0 ,1};
         visited[0][0] = true;
-        queue.offer(start);
+        queue.offer(new Node(0, 0, 1));
 
         while(!queue.isEmpty()) {
-            int[] nowQueue = queue.poll();
+            Node curr = queue.poll();
 
-            int y = nowQueue[0];
-            int x = nowQueue[1];
-            int dist = nowQueue[2];
+            int y = curr.x;
+            int x = curr.y;
+            int dist = curr.dist;
             // for debug
             // System.out.println("y:" + y + ", x:" + x + ", dist:" + dist);
 
@@ -72,8 +71,7 @@ class Solution2 {
                 }
 
                 visited[nextY][nextX] = true;
-                int[] addQueue = {nextY, nextX, dist + 1};
-                queue.offer(addQueue);
+                queue.offer(new Node(nextY, nextX, dist + 1));
             }
         }
 
@@ -93,5 +91,17 @@ class Solution2 {
         Solution sol = new Solution();
         int output = sol.solution(input);
         System.out.println(output);
+    }
+}
+
+class Node {
+    int y;
+    int x;
+    int dist;
+
+    Node(int y, int x, int dist) {
+        this.y = y;
+        this.x = x;
+        this.dist = dist;
     }
 }
