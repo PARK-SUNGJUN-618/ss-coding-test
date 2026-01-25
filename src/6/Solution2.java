@@ -25,8 +25,15 @@ class Solution2 {
     * @return Minimum number of cells in the shortest path, or -1 if unreachable
     */
     public int solution(int[][] maps) {
-        int[] moveY = {1, -1, 0 ,0};
-        int[] moveX = {0 ,0, 1, -1};
+        // int[] moveY = {1, -1, 0 ,0};
+        // int[] moveX = {0 ,0, 1, -1};
+        int[][] directions = {
+            {1,0},
+            {-1,0},
+            {0,1},
+            {0,-1}
+        };
+
         int m = maps.length;
         int n = maps[0].length;
         // for debug
@@ -53,9 +60,9 @@ class Solution2 {
                 return dist;
             }
 
-            for (int i = 0; i < 4; i++) {
-                int nextY = y + moveY[i];
-                int nextX = x + moveX[i];
+            for (int[] dir : directions) {
+                int nextY = y + dir[0];
+                int nextX = x + dir[1];
 
                 // skip if out of bounds
                 if (nextY < 0 || nextX < 0 || nextY > m - 1 || nextX > n - 1) {
