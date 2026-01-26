@@ -65,7 +65,7 @@ class Solution2 {
                 int nextX = x + dir[1];
 
                 // skip if out of bounds
-                if (nextY < 0 || nextX < 0 || nextY > m - 1 || nextX > n - 1) {
+                if (isOutOfBounds(nextY, nextX, nextY, nextX)) {
                     continue;
                 }
                 // skip if already visited
@@ -84,6 +84,10 @@ class Solution2 {
 
         // return -1
         return -1;
+    }
+
+    public boolean isOutOfBounds(int y, int x, int m, int n) {
+        return y < 0 || x < 0 || y >= m || x >= n;
     }
 
     public static void main(String[] args) {
