@@ -48,8 +48,8 @@ class Solution2 {
         while(!queue.isEmpty()) {
             Node curr = queue.poll();
 
-            int y = curr.x;
-            int x = curr.y;
+            int y = curr.y;
+            int x = curr.x;
             int dist = curr.dist;
             // for debug
             // System.out.println("y:" + y + ", x:" + x + ", dist:" + dist);
