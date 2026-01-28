@@ -65,7 +65,7 @@ class Solution2 {
                 int nextX = x + dir[1];
 
                 // skip if out of bounds
-                if (isOutOfBounds(nextY, nextX, nextY, nextX)) {
+                if (isOutOfBounds(nextY, nextX, m, n)) {
                     continue;
                 }
                 // skip if already visited
