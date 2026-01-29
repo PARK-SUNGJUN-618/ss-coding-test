@@ -86,7 +86,7 @@ class Solution2 {
         return -1;
     }
 
-    public boolean isOutOfBounds(int y, int x, int m, int n) {
+    private boolean isOutOfBounds(int y, int x, int m, int n) {
         return y < 0 || x < 0 || y >= m || x >= n;
     }
 
