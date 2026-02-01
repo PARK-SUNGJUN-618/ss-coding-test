@@ -35,6 +35,12 @@ class Solution {
             {0, 0, 1}
         };
 
+        // int[][] computers = {
+        //     {1, 1, 0},
+        //     {1, 1, 1},
+        //     {0, 1, 1}
+        // };
+
         Solution sol = new Solution();
         int output = sol.solution(n, computers);
 
