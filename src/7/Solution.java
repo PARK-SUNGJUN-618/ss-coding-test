@@ -42,8 +42,8 @@ class Solution {
         // };
 
         Solution sol = new Solution();
-        int output = sol.solution(n, computers);
+        int result = sol.solution(n, computers);
 
-        System.out.println(output);
+        System.out.println(result);
     }
 }
