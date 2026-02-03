@@ -23,7 +23,15 @@ class Solution {
     * @return Number of separate networks
     */
     public int solution(int n, int[][] computers) {
-        return 0;
+        int result = 1;
+
+        // create checked boolean list
+        boolean[] checked = new boolean[n];
+
+        
+
+        
+        return result;
     }
 
     public static void main(String[] args) {
