@@ -23,16 +23,35 @@ class Solution {
     * @return Number of separate networks
     */
     public int solution(int n, int[][] computers) {
-        int result = 1;
+        int result = 0;
 
         // create checked boolean list
-        boolean[] checked = new boolean[n];
+        this.checked = new boolean[n];
+        this.computers = computers;
 
-        
+        for (int i = 0; i < n; i++) {
+            if (!checked[n]) {
+                result++;
+                dfs(n);
+            }
+        }
 
         
         return result;
     }
+
+    private void dfs(int n) {
+        checked[n] = true;
+
+        for (int i = 0;i < computers[n].length; i++) {
+            if (!checked[i] && computers[n][i] == 1) {
+                dfs(i);
+            }
+        }
+    }
+
+    boolean[] checked;
+    int[][] computers;
 
     public static void main(String[] args) {
         int n = 3;
