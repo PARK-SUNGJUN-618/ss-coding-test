@@ -1,4 +1,4 @@
-class Solution {
+class Solution7 {
     /*
     * Count the number of networks.
     *
@@ -68,9 +68,8 @@ class Solution {
         //     {0, 1, 1}
         // };
 
-        Solution sol = new Solution();
+        Solution7 sol = new Solution7();
         int result = sol.solution(n, computers);
-
         System.out.println(result);
     }
 }
