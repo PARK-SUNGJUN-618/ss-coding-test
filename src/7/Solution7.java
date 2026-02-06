@@ -30,9 +30,9 @@ class Solution7 {
         this.computers = computers;
 
         for (int i = 0; i < n; i++) {
-            if (!checked[n]) {
+            if (!checked[i]) {
                 result++;
-                dfs(n);
+                dfs(i);
             }
         }
 
