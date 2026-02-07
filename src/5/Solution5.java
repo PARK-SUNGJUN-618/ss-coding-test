@@ -1,7 +1,7 @@
 import java.util.HashSet;
 import java.util.Iterator;
 
-class Solution {
+class Solution5 {
     /*
      * Find the prime numbers.
      *
@@ -68,7 +68,7 @@ class Solution {
     public static void main(String[] args) {
         String input = "17";
         
-        Solution sol = new Solution();
+        Solution5 sol = new Solution5();
         int output = sol.solution(input);
         System.out.println(output);
     }
