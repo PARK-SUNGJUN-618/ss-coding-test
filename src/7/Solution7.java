@@ -26,11 +26,11 @@ class Solution7 {
         int result = 0;
 
         // create checked boolean list
-        this.checked = new boolean[n];
+        this.visited = new boolean[n];
         this.computers = computers;
 
         for (int i = 0; i < n; i++) {
-            if (!checked[i]) {
+            if (!visited[i]) {
                 result++;
                 dfs(i);
             }
@@ -41,16 +41,16 @@ class Solution7 {
     }
 
     private void dfs(int n) {
-        checked[n] = true;
+        visited[n] = true;
 
         for (int i = 0;i < computers[n].length; i++) {
-            if (!checked[i] && computers[n][i] == 1) {
+            if (!visited[i] && computers[n][i] == 1) {
                 dfs(i);
             }
         }
     }
 
-    boolean[] checked;
+    boolean[] visited;
     int[][] computers;
 
     public static void main(String[] args) {
