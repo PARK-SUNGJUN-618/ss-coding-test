@@ -40,11 +40,11 @@ class Solution7 {
         return result;
     }
 
-    private void dfs(int n) {
-        visited[n] = true;
+    private void dfs(int current) {
+        visited[current] = true;
 
-        for (int i = 0;i < computers[n].length; i++) {
-            if (!visited[i] && computers[n][i] == 1) {
+        for (int i = 0;i < computers[current].length; i++) {
+            if (!visited[i] && computers[current][i] == 1) {
                 dfs(i);
             }
         }
