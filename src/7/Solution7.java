@@ -50,8 +50,8 @@ class Solution7 {
         }
     }
 
-    boolean[] visited;
-    int[][] computers;
+    private boolean[] visited;
+    private int[][] computers;
 
     public static void main(String[] args) {
         int n = 3;
