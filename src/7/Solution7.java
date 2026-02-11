@@ -43,9 +43,9 @@ class Solution7 {
     private void dfs(int current) {
         visited[current] = true;
 
-        for (int i = 0;i < computers[current].length; i++) {
-            if (!visited[i] && computers[current][i] == 1) {
-                dfs(i);
+        for (int next = 0;next < computers[current].length; next++) {
+            if (!visited[next] && computers[current][next] == 1) {
+                dfs(next);
             }
         }
     }
