@@ -1,75 +1,57 @@
 class Solution8 {
     /*
-    * Count the number of networks.
+    * Find the minimum number of transformations.
     *
     * Problem:
-    * Given n computers and their connection information,
-    * count how many separate networks exist.
-    * Computers are considered to be in the same network
-    * if they are directly or indirectly connected.
+    * Transform the begin word into the target word
+    * by changing only one letter at a time.
+    * Each intermediate word must exist in the given word list.
+    * Return the minimum number of transformations needed.
+    * Return 0 if the target cannot be reached.
     *
     * Example:
     * Input :
-    * n = 3
-    * [[1,1,0],
-    *  [1,1,0],
-    *  [0,0,1]]
+    * begin = "hit"
+    * target = "cog"
+    * words = ["hot", "dot", "dog", "lot", "log", "cog"]
     *
-    * Output: 2
+    * Output: 4
     *
-    * @param n Number of computers
-    * @param computers Adjacency matrix representing computer connections
-    *                  (1 = connected, 0 = not connected)
-    * @return Number of separate networks
+    * @param begin Starting word
+    * @param target Target word
+    * @param words List of available words for transformation
+    * @return Minimum number of transformations, or 0 if impossible
     */
-    public int solution(int n, int[][] computers) {
+    public int solution(String begin, String target, String[] words) {
         int result = 0;
 
-        // create checked boolean list
-        this.visited = new boolean[n];
-        this.computers = computers;
-
-        for (int i = 0; i < n; i++) {
-            if (!visited[i]) {
-                result++;
-                dfs(i);
-            }
-        }
-
-        
         return result;
     }
 
-    private void dfs(int current) {
-        visited[current] = true;
-
-        for (int next = 0;next < computers[current].length; next++) {
-            if (!visited[next] && computers[current][next] == 1) {
-                dfs(next);
-            }
-        }
-    }
-
-    private boolean[] visited;
-    private int[][] computers;
-
     public static void main(String[] args) {
-        int n = 3;
+        String begin = "hit";
+        String target = "cog";
 
-        int[][] computers = {
-            {1, 1, 0},
-            {1, 1, 0},
-            {0, 0, 1}
+        String[] words = {
+            "hot",
+            "dot",
+            "dog",
+            "lot",
+            "log",
+            "cog"
         };
 
-        // int[][] computers = {
-        //     {1, 1, 0},
-        //     {1, 1, 1},
-        //     {0, 1, 1}
+        // String[] words = {
+        //     "hot",
+        //     "dot",
+        //     "dog",
+        //     "lot",
+        //     "log"
         // };
 
         Solution8 sol = new Solution8();
-        int result = sol.solution(n, computers);
+        int result = sol.solution(begin, target, words);
+
         System.out.println(result);
     }
 }
