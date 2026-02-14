@@ -28,6 +28,24 @@ class Solution8 {
         return result;
     }
 
+    private boolean canTransform(String current, String next) {
+        int diffCount = 0;
+
+        for (int i = 0; i < current.length(); i++) {
+            if (current.charAt(i) != next.charAt(i)) {
+                diffCount++;
+
+                // More than one character is different
+                if (diffCount > 1) {
+                    return false;
+                }
+            }
+        }
+
+        // Exactly one character is different
+        return diffCount == 1;
+    }
+
     public static void main(String[] args) {
         String begin = "hit";
         String target = "cog";
