@@ -1,3 +1,6 @@
+import java.util.LinkedList;
+import java.util.Queue;
+
 class Solution8 {
     /*
     * Find the minimum number of transformations.
@@ -25,8 +28,14 @@ class Solution8 {
     public int solution(String begin, String target, String[] words) {
         int result = 0;
 
+        queue = new LinkedList<>();
+
+        queue.offer(new Node(begin, 0));
+
         return result;
     }
+
+    private Queue<Node> queue;
 
     private boolean canTransform(String current, String next) {
         int diffCount = 0;
@@ -71,5 +80,15 @@ class Solution8 {
         int result = sol.solution(begin, target, words);
 
         System.out.println(result);
+    }
+}
+
+class Node {
+    String word;
+    int cnt;
+
+    Node(String word, int cnt) {
+        this.word = word;
+        this.cnt = cnt;
     }
 }
