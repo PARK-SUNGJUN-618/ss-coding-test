@@ -27,6 +27,7 @@ class Solution8 {
     */
     public int solution(String begin, String target, String[] words) {
         int result = 0;
+        boolean[] visited = new boolean[words.length];
 
         Queue<Node> queue = new LinkedList<>();
 
@@ -42,13 +43,15 @@ class Solution8 {
                 return cnt;
             }
 
-            for (String word : words) {
-                
+            for (int i = 0; i < words.length; i++) {
+                String next = words[i];
+                if (!visited[i] && canTransform(current, next)) {
+                    queue.offer(new Node(next, cnt + 1));
+                    visited[i] = true;
+                }
             }
 
         }
-
-
 
         return result;
     }
