@@ -28,15 +28,30 @@ class Solution8 {
     public int solution(String begin, String target, String[] words) {
         int result = 0;
 
-        queue = new LinkedList<>();
+        Queue<Node> queue = new LinkedList<>();
 
         queue.offer(new Node(begin, 0));
 
-        
+        while(!queue.isEmpty()) {
+            Node node = queue.poll();
+
+            String current = node.current;
+            int cnt = node.cnt;
+
+            if (current.equals(target)) {
+                return cnt;
+            }
+
+            for (String word : words) {
+                
+            }
+
+        }
+
+
+
         return result;
     }
-
-    private Queue<Node> queue;
 
     private boolean canTransform(String current, String next) {
         int diffCount = 0;
@@ -85,11 +100,11 @@ class Solution8 {
 }
 
 class Node {
-    String word;
+    String current;
     int cnt;
 
-    Node(String word, int cnt) {
-        this.word = word;
+    Node(String current, int cnt) {
+        this.current = current;
         this.cnt = cnt;
     }
 }
