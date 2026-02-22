@@ -33,8 +33,15 @@ class Solution9 {
     public int solution(int[][] rectangle, int characterX, int characterY, int itemX, int itemY) {
         int answer = 0;
 
-        //
-        
+        int[][] map = new int[50][50];
+
+        for (int i = 0; i < map.length; i++) {
+            for (int j = 0; j < map[i].length; j++) {
+                System.out.print(map[i][j] + " ");
+            }
+            System.out.println();
+        }
+
         return answer;
     }
 
