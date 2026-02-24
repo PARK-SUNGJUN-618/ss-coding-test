@@ -33,7 +33,13 @@ class Solution9 {
     public int solution(int[][] rectangle, int characterX, int characterY, int itemX, int itemY) {
         int answer = 0;
 
-        int[][] map = new int[50][50];
+        for (int i = 0; i < rectangle.length; i++) {
+            int x1=rectangle[i][0];
+            int y1=rectangle[i][1];
+            int x2=rectangle[i][2];  
+            int y2=rectangle[i][3];
+            draw(y1 * 2, x1 * 2, y2 * 2, x2 * 2);
+        }
 
         for (int i = 0; i < map.length; i++) {
             for (int j = 0; j < map[i].length; j++) {
@@ -44,6 +50,8 @@ class Solution9 {
 
         return answer;
     }
+
+    int[][] map = new int[101][101];
 
     public static void main(String[] args) {
 
