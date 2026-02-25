@@ -34,10 +34,10 @@ class Solution9 {
         int answer = 0;
 
         for (int i = 0; i < rectangle.length; i++) {
-            int x1=rectangle[i][0];
             int y1=rectangle[i][1];
-            int x2=rectangle[i][2];  
+            int x1=rectangle[i][0];
             int y2=rectangle[i][3];
+            int x2=rectangle[i][2];  
             draw(y1 * 2, x1 * 2, y2 * 2, x2 * 2);
         }
 
@@ -52,6 +52,21 @@ class Solution9 {
     }
 
     int[][] map = new int[101][101];
+
+    public void draw(int y1, int x1, int y2, int x2){
+        for (int i = y1; i <= y2; i++) {
+            for (int j = x1; j <= x2; j++) {
+            	if (map[i][j] == 1) {
+                    continue;
+                }
+                map[i][j] = 1;
+                if (i == y1 || i == y2 || j == x1 || j == x2) {
+                    map[i][j] = 2;
+                }
+            }
+        }
+        
+    }
 
     public static void main(String[] args) {
 
