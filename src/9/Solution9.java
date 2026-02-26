@@ -1,3 +1,6 @@
+import java.util.LinkedList;
+import java.util.Queue;
+
 class Solution9 {
     /*
      * Find the shortest path to the item along the boundary.
@@ -48,10 +51,49 @@ class Solution9 {
             System.out.println();
         }
 
+        answer = bfs(characterY*2, characterX*2, itemY*2, itemX*2);
+
         return answer;
     }
 
     int[][] map = new int[101][101];
+
+    public int bfs(int Y,int X,int findY,int findX){
+        int yy[] = {-1,1,0,0};
+        int xx[] = {0,0,-1,1};
+        boolean visited[][]=new boolean[101][101];
+        Queue<Integer[]> queue = new LinkedList<>();
+
+        queue.offer(new Integer[]{Y,X,0});
+
+        while (!queue.isEmpty()) {
+            Integer temp[] = queue.poll();
+
+            int prevY = temp[0];
+            int prevX = temp[1];
+            int count = temp[2];
+
+            if (prevY == findY && prevX == findX) {
+                return count/2;
+            }
+            for(int i=0; i < 4; i++) {
+                int nextY = prevY + yy[i];
+                int nextX = prevX + xx[i];
+                if(nextY < 0 || nextX<0 || nextY>=map.length || nextX>=map[0].length) {
+                    continue;
+                }
+                if(visited[nextY][nextX] == true || map[nextY][nextX] != 2) {
+                    continue;
+                }
+                
+                visited[nextY][nextX]=true;
+                
+                queue.offer(new Integer[]{nextY,nextX,count+1});
+            }
+        }
+        
+        return 0;
+    }
 
     public void draw(int y1, int x1, int y2, int x2){
         for (int i = y1; i <= y2; i++) {
