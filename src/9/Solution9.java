@@ -44,12 +44,12 @@ class Solution9 {
             draw(y1 * 2, x1 * 2, y2 * 2, x2 * 2);
         }
 
-        for (int i = 0; i < map.length; i++) {
-            for (int j = 0; j < map[i].length; j++) {
-                System.out.print(map[i][j] + " ");
-            }
-            System.out.println();
-        }
+        // for (int i = 0; i < map.length; i++) {
+        //     for (int j = 0; j < map[i].length; j++) {
+        //         System.out.print(map[i][j] + " ");
+        //     }
+        //     System.out.println();
+        // }
 
         answer = bfs(characterY*2, characterX*2, itemY*2, itemX*2);
 
@@ -112,41 +112,41 @@ class Solution9 {
 
     public static void main(String[] args) {
 
-    int[][] rectangle = {
-        {1, 1, 7, 4},
-        {3, 2, 5, 5},
-        {4, 3, 6, 9},
-        {2, 6, 8, 8}
-    };
+        int[][] rectangle = {
+            {1, 1, 7, 4},
+            {3, 2, 5, 5},
+            {4, 3, 6, 9},
+            {2, 6, 8, 8}
+        };
 
-    int characterX = 1;
-    int characterY = 3;
-    int itemX = 7;
-    int itemY = 8;
+        int characterX = 1;
+        int characterY = 3;
+        int itemX = 7;
+        int itemY = 8;
 
-    /*
-    int[][] rectangle = {
-        {1, 1, 8, 4},
-        {2, 2, 4, 9},
-        {3, 6, 9, 8},
-        {6, 3, 7, 7}
-    };
+        /*
+        int[][] rectangle = {
+            {1, 1, 8, 4},
+            {2, 2, 4, 9},
+            {3, 6, 9, 8},
+            {6, 3, 7, 7}
+        };
 
-    int characterX = 9;
-    int characterY = 7;
-    int itemX = 6;
-    int itemY = 1;
-    */
+        int characterX = 9;
+        int characterY = 7;
+        int itemX = 6;
+        int itemY = 1;
+        */
 
-    Solution9 sol = new Solution9();
-    int result = sol.solution(
-        rectangle,
-        characterX,
-        characterY,
-        itemX,
-        itemY
-    );
+        Solution9 sol = new Solution9();
+        int result = sol.solution(
+            rectangle,
+            characterX,
+            characterY,
+            itemX,
+            itemY
+        );
 
-    System.out.println(result);
-}
+        System.out.println(result);
+    }
 }
