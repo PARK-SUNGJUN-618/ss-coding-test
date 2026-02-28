@@ -44,24 +44,27 @@ class Solution9 {
             draw(y1 * 2, x1 * 2, y2 * 2, x2 * 2);
         }
 
-        // for (int i = 0; i < map.length; i++) {
-        //     for (int j = 0; j < map[i].length; j++) {
-        //         System.out.print(map[i][j] + " ");
-        //     }
-        //     System.out.println();
-        // }
+        // for debug
+        for (int i = 0; i < map.length; i++) {
+            for (int j = 0; j < map[i].length; j++) {
+                System.out.print(map[i][j] + " ");
+            }
+            System.out.println();
+        }
 
         answer = bfs(characterY*2, characterX*2, itemY*2, itemX*2);
 
         return answer;
     }
 
-    int[][] map = new int[101][101];
+    // int mapLength = 101;
+    int mapLength = 20;
+    int[][] map = new int[mapLength][mapLength];
 
     public int bfs(int Y,int X,int findY,int findX){
         int yy[] = {-1,1,0,0};
         int xx[] = {0,0,-1,1};
-        boolean visited[][]=new boolean[101][101];
+        boolean visited[][]=new boolean[mapLength][mapLength];
         Queue<Integer[]> queue = new LinkedList<>();
 
         queue.offer(new Integer[]{Y,X,0});
