@@ -82,7 +82,7 @@ class Solution9 {
             for(int i=0; i < 4; i++) {
                 int nextY = prevY + yy[i];
                 int nextX = prevX + xx[i];
-                if(nextY < 0 || nextX<0 || nextY>=map.length || nextX>=map[0].length) {
+                if(nextY < 0 || nextX < 0 || nextY >= map.length || nextX >= map[0].length) {
                     continue;
                 }
                 if(visited[nextY][nextX] == true || map[nextY][nextX] != 2) {
