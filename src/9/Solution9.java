@@ -89,9 +89,9 @@ class Solution9 {
                     continue;
                 }
                 
-                visited[nextY][nextX]=true;
+                visited[nextY][nextX] = true;
                 
-                queue.offer(new Integer[]{nextY,nextX,count+1});
+                queue.offer(new Integer[]{nextY, nextX, count+1});
             }
         }
         
