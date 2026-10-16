@@ -50,7 +50,7 @@ class Solution9 {
     static char[] strList = {'A', 'B', 'C'};
 
     public static void main(String[] args) {
-        int length = 20;
+        // int length = 20;
         int countA = 7;
         int countB = 6;
         int countC = 7;

@@ -41,7 +41,7 @@
 
 class Solution5 {
     public static void main(String[] args) {
-        int n = 40;
+        // int n = 40;
         long mod = 1000000007L;
 
         long sum = 0;
