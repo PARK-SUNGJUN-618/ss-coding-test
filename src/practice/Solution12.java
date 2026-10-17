@@ -56,11 +56,20 @@ class Solution12 {
         }
 
         int left = 0;
-        int sum = 0;
-        int size = n;
+        long sum = 0;
+        int minsize = n + 1;
 
         for (int right = 0; right < n; right++) {
-                        
+            sum += a[right];
+
+            while (sum >= k) {
+                minsize = Math.min(minsize, right - left + 1);
+                sum -= a[left];
+                left++;
+            }
+
         }
+
+        System.out.println(minsize == n + 1 ? 0 : minsize);
     }
 }
