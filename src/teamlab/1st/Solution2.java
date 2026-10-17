@@ -46,19 +46,31 @@ class Solution2 {
 
         long cnt = 0;
 
+        // for (int i = 0; i < input.length(); i++) {
+        //     now = input.charAt(i);
+        //     cnt++;
+        //     // System.out.println("check:"+check);
+        //     // System.out.println("now:"+now);
+        //     // System.out.println("cnt:"+cnt);
+        //     if (check != now) {
+        //         if (cnt-1 >= 3) {
+        //             sum += (cnt-1) * (cnt-1);
+        //         } 
+        //         cnt = 1;
+        //         check = now;
+        //     } 
+        // }
+
         for (int i = 0; i < input.length(); i++) {
             now = input.charAt(i);
-            cnt++;
-            // System.out.println("check:"+check);
-            // System.out.println("now:"+now);
-            // System.out.println("cnt:"+cnt);
             if (check != now) {
-                if (cnt-1 >= 3) {
-                    sum += (cnt-1) * (cnt-1);
+                if (cnt >= 3) {
+                    sum += cnt * cnt;
                 } 
-                cnt = 1;
+                cnt = 0;
                 check = now;
             } 
+            cnt++;
         }
 
         System.out.println(sum);
