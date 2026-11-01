@@ -45,7 +45,7 @@
  */
 
 
-class Solution9_2 {
+class Solution2_9_2 {
     static long mod = 1000000007;
     static long[][][][][] memo = new long[8][7][8][4][3];
     static boolean[][][][][] visited = new boolean[8][7][8][4][3];

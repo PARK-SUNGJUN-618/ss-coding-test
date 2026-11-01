@@ -1,7 +1,7 @@
 import java.util.LinkedList;
 import java.util.Queue;
 
-class Solution2 {
+class Solution6_2 {
     /*
     * Find the shortest path to the destination.
     *
@@ -99,7 +99,7 @@ class Solution2 {
             {0,0,0,0,1}
         };
 
-        Solution sol = new Solution();
+        Solution6_2 sol = new Solution6_2();
         int output = sol.solution(input);
         System.out.println(output);
     }

@@ -69,7 +69,7 @@
  * ・Java 25で実装して構いません。
  */
 
-class Solution {
+class Solution2_10 {
     static long answer = 0;
     static int n = 1000;
     static long[] cost = new long[n];

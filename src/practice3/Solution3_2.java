@@ -28,7 +28,7 @@ A[i], A[i+1], A[i+2] を選びます。
 条件を満たす区間の数を整数で回答してください。
 */
 
-class Solution2 {
+class Solution3_2 {
     public static void main(String[] args) {
         int[] A = new int[10000];
 

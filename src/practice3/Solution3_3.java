@@ -38,7 +38,7 @@ int x = (int)((i * 37L + i / 7 + 13) % 10);
 スコアの合計を整数で回答してください。
 */
 
-class Solution3 {
+class Solution3_3 {
     public static void main(String[] args) {
         int N = 100_000;
 

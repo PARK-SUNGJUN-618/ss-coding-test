@@ -31,7 +31,7 @@
  * 整数で出力してください。
  */
 
-class Solution2 {
+class Solution2_2 {
     public static void main(String[] args) {
         String input =
             "AAABBBCCCCDAAEEEEFFGGGGGHH" +

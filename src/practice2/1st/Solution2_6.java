@@ -34,7 +34,7 @@
  * ・Java 11の標準機能のみ使用できます。
  */
 
-class Solution6 {
+class Solution2_6 {
     public static void main(String[] args) {
         int start = 1;
         int end = 50000;

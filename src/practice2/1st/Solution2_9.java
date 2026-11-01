@@ -45,7 +45,7 @@
  */
 
 
-class Solution9 {
+class Solution2_9 {
     static long answer = 0;
     static char[] strList = {'A', 'B', 'C'};
 

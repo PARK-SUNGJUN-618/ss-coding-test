@@ -69,7 +69,7 @@
  * ・Java 25で実装して構いません。
  */
 
-class Solution10_2 {
+class Solution2_10_2 {
     public static void main(String[] args) {
         int n = 1000;
         int[] cost = new int[n];

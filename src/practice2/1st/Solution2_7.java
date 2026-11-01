@@ -34,7 +34,7 @@
  * ・最終的なペアの数を出力してください。
  */
 
-class Solution7 {
+class Solution2_7 {
     public static void main(String[] args) {
         int[] numbers = new int[10000];
 

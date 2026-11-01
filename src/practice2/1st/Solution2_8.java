@@ -37,7 +37,7 @@
  * ・Java 11の標準機能のみ使用できます。
  */
 
-class Solution8 {
+class Solution2_8 {
     
     
     static long answer = 0;

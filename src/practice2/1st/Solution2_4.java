@@ -39,7 +39,7 @@
  * 10進数の整数として出力してください。
  */
 
-class Solution4 {
+class Solution2_4 {
     public static void main(String[] args) {
         int start = 2;
         int end = 100000;

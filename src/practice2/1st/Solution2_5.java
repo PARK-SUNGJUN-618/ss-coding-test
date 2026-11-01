@@ -39,7 +39,7 @@
  * 出力してください。
  */
 
-class Solution5 {
+class Solution2_5 {
     public static void main(String[] args) {
         // int n = 40;
         long mod = 1000000007L;

@@ -25,7 +25,7 @@
 ・計算結果の数値のみを回答してください。
 */
 
-class Solution1 {
+class Solution3_1 {
     public static void main(String[] args) {
         long sum = 0;
 
