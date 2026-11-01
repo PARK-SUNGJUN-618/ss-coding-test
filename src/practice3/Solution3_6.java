@@ -26,7 +26,7 @@ A[i] = (int)((i * 41L + 17) % 100) + 1;
 条件を満たす組合せの数を整数で回答してください。
 */
 
-class Solution6 {
+class Solution3_6 {
     public static void main(String[] args) {
         int N = 300;
         int[] A = new int[N];

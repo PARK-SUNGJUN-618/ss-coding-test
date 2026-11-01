@@ -31,7 +31,7 @@ n = 113 の場合
 条件を満たす整数 n の総和を回答してください。
 */
 
-class Solution4 {
+class Solution3_4 {
     public static void main(String[] args) {
         int N = 100000;
 

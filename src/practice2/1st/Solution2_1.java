@@ -25,7 +25,7 @@
  */
 
 
-class Solution1 {
+class Solution2_1 {
     public static void main(String[] args) {
         Long sum = (long) 0;
         for(int i = 1; i <= 100000; i++ ) {

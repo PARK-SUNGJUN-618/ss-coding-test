@@ -29,7 +29,7 @@
 整数で回答してください。
 */
 
-class Solution7 {
+class Solution3_7 {
     public static void main(String[] args) {
         long result = 0;
         boolean[] used = new boolean[9];
